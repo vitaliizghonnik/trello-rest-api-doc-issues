@@ -1,0 +1,39 @@
+name: Discrepancy in Trello REST API Documentation
+description: Report a discrepancy in the Trello REST API documentation
+title: "[Discrepancy]: Inconsistency in Trello REST API Documentation"
+labels: ["documentation", "triage"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this discrepancy report!
+  - type: textarea
+    id: discrepancy-details
+    attributes:
+      label: What is the discrepancy?
+      description: Please describe the discrepancy in detail.
+      placeholder: Describe the discrepancy
+      value: "Recently, Trello has developed a new view of the REST API documentation which I chose to use while I was adding more requests to the collection. However, I started working with collection requests using an older (classic) view of the API where /1 in the URL address was placed beyond the base URL. This seems to be inconsistent with the new view."
+    validations:
+      required: true
+  - type: dropdown
+    id: documentation-version
+    attributes:
+      label: Which version of the documentation are you using?
+      options:
+        - Classic View
+        - New View
+      default: 1
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: What is the impact of this discrepancy?
+      description: Please describe how this discrepancy affects your use of the API.
+      placeholder: Describe the impact
+    validations:
+      required: false
+
