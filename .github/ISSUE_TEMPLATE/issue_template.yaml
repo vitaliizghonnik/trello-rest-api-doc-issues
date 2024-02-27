@@ -19,8 +19,8 @@ body:
     validations:
       required: true
   - type: dropdown
-  id: api-version
-  attributes:
+    id: api-version
+    attributes:
     label: API Version
     description: Please select the version of the API documentation.
     options:
@@ -28,7 +28,7 @@ body:
       - '2'
       - '3'
     default: 0
-  validations:
+    validations:
     required: true
   - type: dropdown
     id: documentation-version
@@ -51,13 +51,13 @@ body:
     validations:
       required: false  
   - type: dropdown
-  id: documentation-version
-  attributes:
+    id: documentation-version
+    attributes:
     label: Which version of the documentation are you using?
     options:
       - Classic View
     default: 1
-  validations:
+    validations:
     required: true
   - type: textarea
     attributes:
@@ -71,18 +71,18 @@ body:
     validations:
       required: false  
   - type: textarea
-  id: impact
-  attributes:
+    id: impact
+    attributes:
     label: What is the impact of this discrepancy?
     description: Please describe how this discrepancy affects your use of the API.
     placeholder: Describe the impact
-  validations:
+    validations:
     required: false
   - type: textarea
-  attributes:
+    attributes:
     label: Current Behavior
     description: A concise description of what you're experiencing.
-  validations:
+    validations:
     required: false
   - type: textarea
     attributes:
@@ -91,7 +91,7 @@ body:
     validations:
       required: false
   - type: textarea
-  attributes:
+    attributes:
     label: Environment
     description: |
       examples:
@@ -103,7 +103,7 @@ body:
         - Browser:
         - Operating System:
     render: markdown
-  validations:
+    validations:
     required: false
   - type: textarea
     attributes:
