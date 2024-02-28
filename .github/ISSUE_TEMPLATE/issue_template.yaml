@@ -12,9 +12,6 @@ body:
       value: |
         Thanks for taking the time to fill out this discrepancy report!
   - type: textarea
-    attributes:
-      label: "What's wrong?"
-  - type: textarea
     id: discrepancy-details
     attributes:
       label: What is the discrepancy?
@@ -31,8 +28,6 @@ body:
         - "2"
         - "3"
       default: 0
-      validations:
-        required: true
   - type: dropdown
     id: documentation-viewed-mode-new
     attributes:
@@ -40,8 +35,6 @@ body:
       options:
         - New View
       default: 0
-      validations:
-        required: true
   - type: textarea
     id: steps-to-reproduce-new
     attributes:
@@ -52,17 +45,12 @@ body:
         2. 
         3. 
         4. 
-      validations:
-        required: false
   - type: dropdown
     id: documentation-viewed-mode-classic
     attributes:
       label: Which viewed mode of the documentation are you using?
       options:
         - Classic View
-      default: 0
-      validations:
-        required: true
   - type: textarea
     id: steps-to-reproduce-classic
     attributes:
@@ -81,22 +69,16 @@ body:
       label: What is the impact of this discrepancy?
       description: Please describe how this discrepancy affects your use of the API.
       placeholder: Describe the impact
-      validations:
-        required: false
   - type: textarea
     id: current-behavior
     attributes:
       label: Current Behavior
       description: A concise description of what you're experiencing.
-      validations:
-        required: false
   - type: textarea
     id: expected-behavior
     attributes:
       label: Expected Behavior
       description: A concise description of what you expected to happen.
-      validations:
-        required: false
   - type: textarea
     id: environment
     attributes:
@@ -121,5 +103,3 @@ body:
 
 
         Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
-      validations:
-        required: false
