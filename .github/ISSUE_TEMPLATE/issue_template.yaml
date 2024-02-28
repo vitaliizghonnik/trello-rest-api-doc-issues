@@ -61,8 +61,6 @@ body:
         2. 
         3. 
         4. 
-      validations:
-        required: false
   - type: textarea
     id: impact
     attributes:
