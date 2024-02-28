@@ -9,7 +9,6 @@ assignees:
 body:
   - type: markdown
     attributes:
-      label: Discrepancy
       value: |
         Thanks for taking the time to fill out this discrepancy report!
   - type: textarea
@@ -19,96 +18,102 @@ body:
       description: Please describe the discrepancy in detail.
       placeholder: Describe the discrepancy
       value: "Trello has recently introduced a _New View_ of the REST API documentation with a different outlook in the base URL section than it represented in the _Classic View_. In _New View_, the aside section shows the method of REST API, the endpoint is in the header, and varieties of URLs are shown in the body section. In this view, the method (GET, POST, etc.) includes the `/1` (forward slash symbol and digit -1) in the URL address, which means the version of the API. In _Classic View_ a version of API is placed beyond the method REST API."
-    validations:
-      required: true
+      validations:
+        required: true
   - type: dropdown
     id: api-version
-    attributes: null
-    label: API Version
-    description: Please select the version of the API documentation.
-    options:
-      - "1"
-      - "2"
-      - "3"
-    default: 0
-    validations: null
-    required: true
-  - type: dropdown
-    id: documentation-version
     attributes:
-      label: Which version of the documentation are you using?
+      label: API Version
+      description: Please select the version of the API documentation.
+      options:
+        - "1"
+        - "2"
+        - "3"
+      default: 0
+      validations:
+        required: true
+  - type: dropdown
+    id: documentation-viewed-mode-new
+    attributes:
+      label: Which viewed mode of the documentation are you using?
       options:
         - New View
       default: 1
-      validations: null
-      required: true
+      validations:
+        required: true
   - type: textarea
+    id: steps-to-reproduce-new
     attributes:
       label: Steps To Reproduce
       description: Steps to reproduce the behavior.
       placeholder: |
         1.
-        1. 
-        1. 
-        1. 
-    validations:
-      required: false
+        2. 
+        3. 
+        4. 
+      validations:
+        required: false
   - type: dropdown
-    id: documentation-version
-    attributes: null
-    label: Which version of the documentation are you using?
-    options:
-      - Classic View
-    default: 1
-    validations: null
-    required: true
+    id: documentation-viewed-mode-classic
+    attributes:
+      label: Which viewed mode of the documentation are you using?
+      options:
+        - Classic View
+      default: 1
+      validations:
+        required: true
   - type: textarea
+    id: steps-to-reproduce-classic
     attributes:
       label: Steps To Reproduce
       description: Steps to reproduce the behavior.
       placeholder: |
         1.
-        1. 
-        1. 
-        1. 
-    validations:
-      required: false
+        2. 
+        3. 
+        4. 
+      validations:
+        required: false
   - type: textarea
     id: impact
-    attributes: null
-    label: What is the impact of this discrepancy?
-    description: Please describe how this discrepancy affects your use of the API.
-    placeholder: Describe the impact
-    validations: null
-    required: false
+    attributes:
+      label: What is the impact of this discrepancy?
+      description: Please describe how this discrepancy affects your use of the API.
+      placeholder: Describe the impact
+      validations:
+        required: false
   - type: textarea
-    attributes: null
-    label: Current Behavior
-    description: A concise description of what you're experiencing.
-    validations: null
-    required: false
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      description: A concise description of what you're experiencing.
+      validations:
+        required: false
   - type: textarea
+    id: expected-behavior
     attributes:
       label: Expected Behavior
       description: A concise description of what you expected to happen.
-    validations:
-      required: false
+      validations:
+        required: false
   - type: textarea
-    attributes: null
-    label: Environment
-    description: |
-      examples:
-        - **Documentation**: Trello REST API documentation (both Classic View and New View)
-        - **Browser**: Google Chrome Version 96.0.4664.93 (Official Build) (64-bit)
-        - **Operating System**: macOS Monterey Version 12.0.1
-    value: |
-      - Documentation: 
-      - Browser:
-      - Operating System:
-    render: markdown
-    validations: null
-    required: false
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        examples:
+          - **Documentation**: Trello REST API documentation (both Classic View and New View)
+          - **Browser**: Google Chrome Version 96.0.4664.93 (Official Build) (64-bit)
+          - **Operating System**: macOS Monterey Version 12.0.1
+      value: |
+        - Documentation: 
+        - Browser:
+        - Operating System:
+      render: markdown
+      validations:
+        required: false
   - type: textarea
+    id: anything-else
     attributes:
       label: Anything else?
       description: |
@@ -117,5 +122,5 @@ body:
 
 
         Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
-    validations:
-      required: false
+      validations:
+        required: false
