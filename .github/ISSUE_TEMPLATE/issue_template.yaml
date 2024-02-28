@@ -12,14 +12,15 @@ body:
       value: |
         Thanks for taking the time to fill out this discrepancy report!
   - type: textarea
+    attributes:
+      label: "What's wrong?"
+  - type: textarea
     id: discrepancy-details
     attributes:
       label: What is the discrepancy?
       description: Please describe the discrepancy in detail.
       placeholder: Describe the discrepancy
       value: "Trello has recently introduced a _New View_ of the REST API documentation with a different outlook in the base URL section than it represented in the _Classic View_. In _New View_, the aside section shows the method of REST API, the endpoint is in the header, and varieties of URLs are shown in the body section. In this view, the method (GET, POST, etc.) includes the `/1` (forward slash symbol and digit -1) in the URL address, which means the version of the API. In _Classic View_ a version of API is placed beyond the method REST API."
-      validations:
-        required: true
   - type: dropdown
     id: api-version
     attributes:
@@ -38,7 +39,7 @@ body:
       label: Which viewed mode of the documentation are you using?
       options:
         - New View
-      default: 1
+      default: 0
       validations:
         required: true
   - type: textarea
@@ -59,7 +60,7 @@ body:
       label: Which viewed mode of the documentation are you using?
       options:
         - Classic View
-      default: 1
+      default: 0
       validations:
         required: true
   - type: textarea
@@ -110,8 +111,6 @@ body:
         - Browser:
         - Operating System:
       render: markdown
-      validations:
-        required: false
   - type: textarea
     id: anything-else
     attributes:
